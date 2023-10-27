@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.body {
+    margin: 0 auto;
+    max-width: 1000px;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-color: #eee;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}

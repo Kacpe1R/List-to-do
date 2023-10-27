@@ -1,0 +1,77 @@
+.section {
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 0 7px #ccc;
+}
+
+.section__area {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .section__area {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__title {
+    margin: 0;
+    padding: 20px;
+    font-weight: 900;
+}
+
+@media (max-width: 576px) {
+    .section__title {
+        font-size: 20px;
+    }
+}
+
+.section__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .section__buttons {
+        grid-template-columns: 1fr;
+        padding: 0 0 20px 0;
+    }
+}
+
+.section__button {
+    padding: 10px;
+    color: teal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.section__button:hover {
+    color: rgb(0, 186, 186);
+}
+
+@media (max-width: 768px) {
+    .section__button {
+        padding: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .section__button {
+        font-size: 14px;
+    }
+}
+
+.section__button--disabled {
+    color: #ccc;
+    cursor: non-allowed;
+}
+
+.section__button--disabled:hover {
+    color: #ccc;
+}

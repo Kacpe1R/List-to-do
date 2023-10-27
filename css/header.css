@@ -1,0 +1,9 @@
+.header__title {
+    font-weight: 900;
+}
+
+@media (max-width: 575px) {
+    .header__title {
+        font-size: 26px;
+    }
+}
