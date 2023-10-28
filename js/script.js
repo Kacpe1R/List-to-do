@@ -77,8 +77,8 @@
 
         if (tasks.length > 0) {
             buttonsContent = `			
-            <button class="section__button js-toggleHideDoneTasks"${tasks.some(({ done }) => done) ? " " : "disabled"}>${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-			<button class="section__button js-markAllTasksDoneButton"${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>`;
+            <button class="section__button js-toggleHideDoneTasks"${tasks.some(({ done }) => done) ? " " : "disabled"}>${hideDoneTasks ? "Show" : "Hide"} completed</button>
+			<button class="section__button js-markAllTasksDoneButton"${tasks.every(({ done }) => done) ? "disabled" : ""}>Complete all</button>`;
         }
         const buttonsElement = document.querySelector(".js-buttons");
         buttonsElement.innerHTML = buttonsContent;
