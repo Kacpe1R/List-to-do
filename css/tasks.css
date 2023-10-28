@@ -22,7 +22,7 @@
 }
 
 .task__button {
-    padding: 7px 10px;
+    padding: 8px 5px;
 	background-color: rgb(0, 131, 0);
 	border: none;
 	color: #fff;
@@ -35,13 +35,18 @@
     background-color: rgb(28, 161, 26);
 }
 
+.task__button:active {
+    border: 1px outset black;
+    transition: none;
+}
+
 .task__button--remove {
-    background-color: rgb(220, 0, 0);
+    background-color: rgb(255, 52, 79);
     cursor: pointer;
 }
 
 .task__button--remove:hover {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 52, 110);
 }
 
 .taskDone {

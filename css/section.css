@@ -67,11 +67,7 @@
     }
 }
 
-.section__button--disabled {
-    color: #ccc;
-    cursor: non-allowed;
-}
-
-.section__button--disabled:hover {
-    color: #ccc;
+.section__button:disabled {
+    color: hsla(180, 22%, 62%, 0.603);
+    cursor: default;
 }
