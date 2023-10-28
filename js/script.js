@@ -77,11 +77,8 @@
 
         if (tasks.length > 0) {
             buttonsContent = `			
-            <button class="section__button js-toggleHideDoneTasks">
-			${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-			<button class="section__button 
-			${tasks.every(({ done }) => done) ? "section__button--disabled" : ""} 
-			js-markAllTasksDoneButton">Ukończ wszystkie</button>`;
+            <button class="section__button js-toggleHideDoneTasks"${tasks.some(({ done }) => done) ? " " : "disabled"}>${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
+			<button class="section__button js-markAllTasksDoneButton"${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>`;
         }
         const buttonsElement = document.querySelector(".js-buttons");
         buttonsElement.innerHTML = buttonsContent;
@@ -118,13 +115,13 @@
         const input = document.querySelector(".js-newTask");
         const newTaskContent = input.value.trim();
 
-        if (newTaskContent === "") {
-            return;
-        }
-        addNewTasks(newTaskContent);
-        input.value = "";
-        input.focus();
-    };
+        if (newTaskContent !== "") {
+            addNewTasks(newTaskContent);
+            input.value = "";
+          }
+      
+          input.focus();
+        };
 
     const init = () => {
         render();
