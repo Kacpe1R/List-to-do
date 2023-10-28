@@ -64,7 +64,7 @@
             <li class="task${task.done && hideDoneTasks ? " tasks__itemHidden" : ""}">
             <button class="task__button js-done">${task.done ? "✔" : ""}</button>
             <span class="task__content${task.done ? " taskDone" : ""}">${task.content}</span>
-            <button class="task__button task__button--remove js-remove">🗑
+            <button class="task__button task__button--remove js-remove">🗑️
             </button>
         </li>`;
         }
